@@ -27,7 +27,7 @@ function Navi () {
   }
 
   this._page = function (id, page) {
-    return `<li class='page ${page.has_changes() ? 'changes' : ''}' onclick='left.go.to_page(${id})'>${page.name()}</li>`
+    return `<li class='page ${page.has_changes() ? 'changes' : ''}' onclick='left.go.to_page(${id}, ${page.line})' ondrop='left.project.pages[${id}].on_drop(event)'>${page.name()}</li>`
   }
 
   this._marker = function (pid, current, marker, markers) {

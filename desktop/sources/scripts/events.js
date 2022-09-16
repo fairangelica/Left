@@ -80,6 +80,7 @@ window.addEventListener('dragover', function (e) {
   e.stopPropagation()
   e.preventDefault()
   e.dataTransfer.dropEffect = 'copy'
+  if (e.ctrlKey) e.dataTransfer.dropEffect = 'move'
 })
 
 window.addEventListener('drop', function (e) {
@@ -87,6 +88,8 @@ window.addEventListener('drop', function (e) {
   e.preventDefault()
 
   const files = e.dataTransfer.files
+
+  if (files.length === 0) return
 
   for (const id in files) {
     const file = files[id]
