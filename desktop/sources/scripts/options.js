@@ -1,7 +1,7 @@
 'use strict'
 
 function Options () {
-  this.electron = require('electron');
+  this.remote = require('@electron/remote')
   const root = document.documentElement
   this.colWidth = 80
   this.w = 900
@@ -10,7 +10,7 @@ function Options () {
 
 
   this.setDimensions = function () {
-    var window = this.electron.remote.getCurrentWindow();
+    var window = this.remote.getCurrentWindow();
     const { w, h } = window.getSize()
     this.w = window.getSize()[0]
     this.h = window.getSize()[1]
@@ -46,7 +46,7 @@ function Options () {
   // Update the CSS variables, save the values to localStorage
   this.updateVariables = function () {
     this.element.style.setProperty('width', `${this.colWidth}ch`)
-    var window = this.electron.remote.getCurrentWindow();
+    var window = this.remote.getCurrentWindow();
     window.setSize(this.w, this.h)
     window.center()
     this.save()
