@@ -1,7 +1,7 @@
 'use strict'
 
 const fs = require('fs')
-const { app, dialog } = require('electron').remote
+const { app, dialog } = require('@electron/remote')
 const EOL = '\n'
 
 function Page (text = '', path = null) {

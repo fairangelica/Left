@@ -2,12 +2,12 @@
 
 function Controller () {
   const fs = require('fs')
-  const { dialog, app } = require('electron').remote
+  const { dialog, app } = require('@electron/remote')
 
   this.menu = { default: {} }
   this.mode = 'default'
 
-  this.app = require('electron').remote.app
+  this.app = require('@electron/remote').app
 
   this.start = function () {
   }

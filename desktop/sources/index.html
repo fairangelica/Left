@@ -16,7 +16,8 @@
     <script>
       'use strict'
 
-      const { shell, remote } = require('electron')
+      const { shell } = require('electron')
+      const remote = require('@electron/remote')
       const Left = require('./left')
       const { app } = remote
       const EOL = '\n'
