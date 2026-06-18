@@ -4,8 +4,8 @@ function Options () {
   this.remote = require('@electron/remote')
   const root = document.documentElement
   this.colWidth = 80
-  this.w = 900
-  this.h = 500
+  this.w = 780
+  this.h = 462
   this.numHeaderCharsToShow = 20
 
 
@@ -65,8 +65,8 @@ function Options () {
   this.reset = function () {
     localStorage.removeItem('options')
     this.colWidth = 80
-    this.w = 900
-    this.h = 500
+    this.w = 780
+    this.h = 462
     this.numHeaderCharsToShow = 20
     this.updateVariables()
   }
