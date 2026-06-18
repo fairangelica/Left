@@ -19,10 +19,11 @@ Left is a simple, minimalist, open-source and cross-platform text editor.
 
 -- Details
 
-- L : stands for Lines.
-- W : stands for Words.
-- V : stands for Vocabulary, or unique words.
-- C : stands for Characters.
+- L  : stands for Lines.
+- W  : stands for Words.
+- V  : stands for Vocabulary, or unique words.
+- C  : stands for Characters.
+- RT : stands for Read Time.
 
 -- Quick Inserts
 
